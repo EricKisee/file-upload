@@ -35,6 +35,8 @@ public class MainController {
     newFile.setDate(date);
     newFile.setFileBytes(file.getBytes());
 
+    System.out.println("--\n\n\n-----\n\n file bytes length is \n\n\n"  + file.getBytes().length );
+
     fileRepository.save(newFile);
     return newFile.toString();
   }

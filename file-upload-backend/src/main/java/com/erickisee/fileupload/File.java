@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class File {
@@ -14,7 +15,8 @@ public class File {
     private String name ;
     private String date ;
     
-    @Column(name = "fileBytes", length = 10000)
+    @Lob
+    @Column(name = "fileBytes")
     private byte[] fileBytes ;
 
     public Integer getId(){
